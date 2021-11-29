@@ -1,10 +1,20 @@
 import './App.css';
+import React from 'react';
+import Timer from './components/Timer';
 
 function App() {
   return (
-    <div>
-      <h1>Try</h1>
-    </div>
+    <>  
+      <Timer 
+      time={60000} 
+      step={1000} 
+      autostart={true} 
+      onTick={(time) => console.log("Залишилось часу: " + time)}
+      onTimeEnd={() => console.log("Час вийшов!")} 
+      onTimeStart={() => console.log("Таймер запущено!")}
+      onTimePause={() => console.log("Таймер на паузі!")}
+      />  
+    </>
   );
 }
 
