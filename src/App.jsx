@@ -6,7 +6,7 @@ function App() {
   return (
     <>  
       <Timer 
-      time={60000} 
+      time={100000} 
       step={1000} 
       autostart={true} 
       onTick={(time) => console.log("Залишилось часу: " + time)}
